@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A curated collection of beautiful travel and lifestyle photography.">
+    <title>Frame &amp; Form | Image Gallery</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="Frame and Form home">
+            <span class="brand-mark">F</span>
+            <span>frame<span class="brand-and">&amp;</span>form</span>
+        </a>
+        <span class="header-note">Curated visual stories</span>
+    </header>
+
+    <main class="page-content">
+        <section class="hero" aria-labelledby="page-title">
+            <p class="eyebrow">The visual journal / 2024</p>
+            <h1 id="page-title">A collection of<br><em>beautiful moments.</em></h1>
+            <p class="intro">A little archive of places, people, and details that deserve a second look.</p>
+        </section>
+
+        <nav class="category-tabs" aria-label="Gallery categories">
+            <button class="tab is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+            <button class="tab" type="button" data-filter="nature" aria-pressed="false">Nature</button>
+            <button class="tab" type="button" data-filter="architecture" aria-pressed="false">Architecture</button>
+            <button class="tab" type="button" data-filter="lifestyle" aria-pressed="false">Lifestyle</button>
+        </nav>
+
+        <section class="gallery" aria-label="Image collection">
+            <button class="gallery-card card-large" type="button" data-category="nature"
+                data-image="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                data-title="Quiet horizons" data-description="The mountain range just before sunrise.">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Mountain range under a soft blue sky" loading="eager">
+                <span class="card-label">01 / Nature</span>
+                <span class="card-title">Quiet horizons</span>
+            </button>
+            <button class="gallery-card card-tall" type="button" data-category="architecture"
+                data-image="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                data-title="Lines of light" data-description="A study in shape, shadow, and stillness.">
+                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Modern white building with geometric lines" loading="lazy">
+                <span class="card-label">02 / Architecture</span>
+                <span class="card-title">Lines of light</span>
+            </button>
+            <button class="gallery-card card-wide" type="button" data-category="lifestyle"
+                data-image="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                data-title="Slow mornings" data-description="Coffee, conversation, and no rush.">
+                <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Friends enjoying a sunny morning outdoors" loading="lazy">
+                <span class="card-label">03 / Lifestyle</span>
+                <span class="card-title">Slow mornings</span>
+            </button>
+            <button class="gallery-card card-small" type="button" data-category="nature"
+                data-image="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                data-title="Into the wild" data-description="A path worth taking.">
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Person walking through a green forest" loading="lazy">
+                <span class="card-label">04 / Nature</span>
+                <span class="card-title">Into the wild</span>
+            </button>
+            <button class="gallery-card card-small" type="button" data-category="architecture"
+                data-image="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                data-title="Concrete poetry" data-description="Where function becomes form.">
+                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Concrete architectural staircase" loading="lazy">
+                <span class="card-label">05 / Architecture</span>
+                <span class="card-title">Concrete poetry</span>
+            </button>
+            <button class="gallery-card card-wide" type="button" data-category="lifestyle"
+                data-image="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                data-title="Make space" data-description="A calm corner for good ideas.">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Minimal desk with notebook and coffee" loading="lazy">
+                <span class="card-label">06 / Lifestyle</span>
+                <span class="card-title">Make space</span>
+            </button>
+        </section>
+    </main>
+
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content">
+            <button class="close-button" type="button" aria-label="Close image preview" data-close-modal>&times;</button>
+            <img class="modal-image" src="" alt="">
+            <div class="modal-caption">
+                <p class="modal-label"></p>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
